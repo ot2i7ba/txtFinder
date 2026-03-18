@@ -34,22 +34,38 @@ If you find this tool useful, I’m glad to hear it. Feel free to improve upon i
 - [Disclaimer](#disclaimer)
 
 ## Features
-- **Interactive menu** — six menu items covering list generation, JSON search, file search, history, and settings
-- **4 search modes** — exact substring, fuzzy (configurable threshold), word stems, and regular expressions
-- **6 document types** — PDF (text-based and image/OCR), JPG/JPEG, DOCX, XLSX, PPTX, ODT, and TXT
-- **OCR support** — reads text from JPG images and image-based PDFs via Tesseract; configurable language, PSM, DPI, and confidence threshold
-- **Fuzzy matching** — sliding-window algorithm catches typos and OCR artefacts; default similarity threshold 80 %
-- **Stems mode** — searches word stems to match inflected forms; configurable minimum stem length
-- **Filelist comparison** — compare a plain-text list of filenames against `filenames.json`; generates a PDF report and an optional hitlist (`.txt`)
-- **Hash list matching** — compare external SHA-256/MD5 hash lists against `filenames.json`; supports NSRL RDS CSV format; recursive `hashes/` directory scan
-- **File export** — copy all hash-matched files into a structured `export/` directory with associated reports
-- **Highlight & mark** — matches are annotated directly in output copies (PDF highlight annotations, `[[FOUND]]` markers in TXT, copied files for JPG and Office formats)
-- **Per-file PDF reports** — match breakdown with file metadata, hash verification, context snippet, and a forensic disclaimer
-- **CSV summary** — semicolon-delimited, timestamped export of all search results (UTF-8 BOM for broad tool compatibility)
-- **Settings editor** — runtime editing of all parameters; changes are saved to `txtfinder_config.json` and loaded automatically on startup
-- **Disk text cache** — extracted PDF and OCR text is persisted to `.txtfinder_cache/` with automatic 90-day cleanup
-- **In-memory text cache** — extracted text is reused within a search run to avoid double-processing (FIFO eviction, 200-entry limit)
-- **Search profiles** — extra search words can be saved as reusable profiles and loaded before each run
+- **Interactive menu**
+  six menu items covering list generation, JSON search, file search, history, and settings
+- **4 search modes**
+  exact substring, fuzzy (configurable threshold), word stems, and regular expressions
+- **6 document types**
+  PDF (text-based and image/OCR), JPG/JPEG, DOCX, XLSX, PPTX, ODT, and TXT
+- **OCR support**
+  reads text from JPG images and image-based PDFs via Tesseract; configurable language, PSM, DPI, and confidence threshold
+- **Fuzzy matching**
+  sliding-window algorithm catches typos and OCR artefacts; default similarity threshold 80 %
+- **Stems mode**
+  searches word stems to match inflected forms; configurable minimum stem length
+- **Filelist comparison**
+  compare a plain-text list of filenames against `filenames.json`; generates a PDF report and an optional hitlist (`.txt`)
+- **Hash list matching**
+  compare external SHA-256/MD5 hash lists against `filenames.json`; supports NSRL RDS CSV format; recursive `hashes/` directory scan
+- **File export**
+  copy all hash-matched files into a structured `export/` directory with associated reports
+- **Highlight & mark**
+  matches are annotated directly in output copies (PDF highlight annotations, `[[FOUND]]` markers in TXT, copied files for JPG and Office formats)
+- **Per-file PDF reports**
+  match breakdown with file metadata, hash verification, context snippet, and a forensic disclaimer
+- **CSV summary**
+  semicolon-delimited, timestamped export of all search results (UTF-8 BOM for broad tool compatibility)
+- **Settings editor**
+  runtime editing of all parameters; changes are saved to `txtfinder_config.json` and loaded automatically on startup
+- **Disk text cache**
+  extracted PDF and OCR text is persisted to `.txtfinder_cache/` with automatic 90-day cleanup
+- **In-memory text cache**
+  extracted text is reused within a search run to avoid double-processing (FIFO eviction, 200-entry limit)
+- **Search profiles**
+  extra search words can be saved as reusable profiles and loaded before each run
 
 ## Supported file types
 | Type | Search | Output | OCR |
@@ -86,7 +102,7 @@ odfpy>=1.4.1,<2.0.0
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/ot2i7ba/txtFinder.git
+git clone https://github.com/ot2i7ba/txtfinder.git
 cd txtfinder
 ```
 
@@ -288,8 +304,6 @@ To create a single `txtFinder.exe` that runs on Windows without a Python install
 ```bash
 pip install pyinstaller
 ```
-
-You also need an icon file `txtfinder.ico` (Windows ICO format; recommended sizes: 16×16, 32×32, 48×48, 256×256).
 
 **Windows build command:**
 
