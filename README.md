@@ -86,7 +86,7 @@ odfpy>=1.4.1,<2.0.0
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/ot2i7ba/txtfinder.git
+git clone https://github.com/ot2i7ba/txtFinder.git
 cd txtfinder
 ```
 
