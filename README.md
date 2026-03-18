@@ -34,38 +34,22 @@ If you find this tool useful, I’m glad to hear it. Feel free to improve upon i
 - [Disclaimer](#disclaimer)
 
 ## Features
-- **Interactive menu**
-  six menu items covering list generation, JSON search, file search, history, and settings
-- **4 search modes**
-  exact substring, fuzzy (configurable threshold), word stems, and regular expressions
-- **6 document types**
-  PDF (text-based and image/OCR), JPG/JPEG, DOCX, XLSX, PPTX, ODT, and TXT
-- **OCR support**
-  reads text from JPG images and image-based PDFs via Tesseract; configurable language, PSM, DPI, and confidence threshold
-- **Fuzzy matching**
-  sliding-window algorithm catches typos and OCR artefacts; default similarity threshold 80 %
-- **Stems mode**
-  searches word stems to match inflected forms; configurable minimum stem length
-- **Filelist comparison**
-  compare a plain-text list of filenames against `filenames.json`; generates a PDF report and an optional hitlist (`.txt`)
-- **Hash list matching**
-  compare external SHA-256/MD5 hash lists against `filenames.json`; supports NSRL RDS CSV format; recursive `hashes/` directory scan
-- **File export**
-  copy all hash-matched files into a structured `export/` directory with associated reports
-- **Highlight & mark**
-  matches are annotated directly in output copies (PDF highlight annotations, `[[FOUND]]` markers in TXT, copied files for JPG and Office formats)
-- **Per-file PDF reports**
-  match breakdown with file metadata, hash verification, context snippet, and a forensic disclaimer
-- **CSV summary**
-  semicolon-delimited, timestamped export of all search results (UTF-8 BOM for broad tool compatibility)
-- **Settings editor**
-  runtime editing of all parameters; changes are saved to `txtfinder_config.json` and loaded automatically on startup
-- **Disk text cache**
-  extracted PDF and OCR text is persisted to `.txtfinder_cache/` with automatic 90-day cleanup
-- **In-memory text cache**
-  extracted text is reused within a search run to avoid double-processing (FIFO eviction, 200-entry limit)
-- **Search profiles**
-  extra search words can be saved as reusable profiles and loaded before each run
+- **Interactive menu**<br>six menu items covering list generation, JSON search, file search, history, and settings
+- **4 search modes**<br>exact substring, fuzzy (configurable threshold), word stems, and regular expressions
+- **6 document types**<br>PDF (text-based and image/OCR), JPG/JPEG, DOCX, XLSX, PPTX, ODT, and TXT
+- **OCR support**<br>reads text from JPG images and image-based PDFs via Tesseract; configurable language, PSM, DPI, and confidence threshold
+- **Fuzzy matching**<br>sliding-window algorithm catches typos and OCR artefacts; default similarity threshold 80 %
+- **Stems mode**<br>searches word stems to match inflected forms; configurable minimum stem length
+- **Filelist comparison**<br>compare a plain-text list of filenames against `filenames.json`; generates a PDF report and an optional hitlist (`.txt`)
+- **Hash list matching**<br>compare external SHA-256/MD5 hash lists against `filenames.json`; supports NSRL RDS CSV format; recursive `hashes/` directory scan
+- **File export**<br>copy all hash-matched files into a structured `export/` directory with associated reports
+- **Highlight & mark**<br>matches are annotated directly in output copies (PDF highlight annotations, `[[FOUND]]` markers in TXT, copied files for JPG and Office formats)
+- **Per-file PDF reports**<br>match breakdown with file metadata, hash verification, context snippet, and a forensic disclaimer
+- **CSV summary**<br>semicolon-delimited, timestamped export of all search results (UTF-8 BOM for broad tool compatibility)
+- **Settings editor**<br>runtime editing of all parameters; changes are saved to `txtfinder_config.json` and loaded automatically on startup
+- **Disk text cache**<br>extracted PDF and OCR text is persisted to `.txtfinder_cache/` with automatic 90-day cleanup
+- **In-memory text cache**<br>extracted text is reused within a search run to avoid double-processing (FIFO eviction, 200-entry limit)
+- **Search profiles**<br>extra search words can be saved as reusable profiles and loaded before each run
 
 ## Supported file types
 | Type | Search | Output | OCR |
