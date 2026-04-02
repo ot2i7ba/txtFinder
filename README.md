@@ -4,7 +4,7 @@
 ## Why txtFinder?!
 This tool was created out of the need to process over 1,500 non-searchable A4 PDF documents and check whether they contain references to one or more of 500+ filenames stored in a e01 Image.
 
-The initial idea was to use OCR for text recognition. However, over time, the tool gradually grew beyond that original scope. At this point, I want to acknowledge that I am fully aware the current structure—especially having everything in a single file and lacking proper modularization—is far from ideal. It should have been planned more carefully instead of being extended “just in time.” That said, it works well for my purposes.
+The initial idea was to use OCR for text recognition. However, over time, the tool gradually grew beyond that original scope. At this point, I want to acknowledge that I am fully aware the current structure — especially having everything in a single file and lacking proper modularization — is far from ideal. It should have been planned more carefully instead of being extended “just in time.” That said, it works well for my purposes.
 
 If you find this tool useful, I’m glad to hear it. Feel free to improve upon it and make up for my shortcomings.
 
